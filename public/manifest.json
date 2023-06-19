@@ -1,0 +1,21 @@
+{
+  "name": "Dev Junior Alves",
+  "short_name": "JR",
+  "icons": [
+    {
+      "src": "/img/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#201f27",
+  "description": "Blog PWA",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#201f27"
+}

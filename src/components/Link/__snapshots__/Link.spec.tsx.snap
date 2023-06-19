@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> should render default correctly 1`] = `
+<div>
+  <a
+    class="text-xl text-link group transition-all duration-300 ease-in-out"
+    href="/"
+  >
+    <span
+      class="bg-gradient-to-r from-link to-link bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px]"
+    >
+      Link
+    </span>
+  </a>
+</div>
+`;

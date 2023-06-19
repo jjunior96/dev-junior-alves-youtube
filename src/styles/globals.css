@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: #201f27;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+::selection {
+  background-color: #48dbfb60;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #46495a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e1e5ee;
+  border-radius: 8px;
+}
+
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Heading custom style for rehype-autolink-headings */
+.heading-anchor {
+  text-decoration: none;
+}
+
+.heading-anchor:hover:after {
+  content: ' #';
+  color: #e1e5ee;
+}
+
+iframe {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 1rem;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: --background-start-rgb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

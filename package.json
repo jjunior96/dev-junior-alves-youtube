@@ -1,0 +1,82 @@
+{
+  "name": "youtube-videos",
+  "version": "0.1.0",
+  "author": {
+    "name": "Junior Alves"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "next build && next start",
+    "sitemap": "node src/scripts/sitemap.mjs",
+    "rss": "node src/scripts/rss.mjs",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "lint": "eslint src --max-warnings=0",
+    "typecheck": "bash -c tsc --project tsconfig.json --noEmit",
+    "test": "jest",
+    "test:watch": "yarn test --watch",
+    "test:coverage": "yarn test --coverage --detectOpenHandles",
+    "test:coverage:text": "yarn test --coverageReporters='text-summary'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn typecheck",
+      "yarn test --findRelatedTests --passWithNoTests --bail"
+    ]
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.0.10",
+    "autoprefixer": "10.4.14",
+    "clsx": "^1.2.1",
+    "next": "13.4.6",
+    "next-compose-plugins": "^2.2.1",
+    "next-pwa": "^5.6.0",
+    "next-sitemap": "^4.1.3",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.32.1",
+    "tailwind-merge": "^1.13.2",
+    "tailwindcss": "3.3.2",
+    "tailwind-styled-components": "^2.2.0",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.3.65",
+    "@swc/jest": "^0.2.26",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.2",
+    "@types/node": "20.3.1",
+    "@types/react": "18.2.12",
+    "@types/react-dom": "18.2.5",
+    "@types/testing-library__jest-dom": "^5.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
+    "eslint": "8.43.0",
+    "eslint-config-george-lint": "^1.0.8",
+    "eslint-config-next": "^13.4.6",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import-helpers": "^1.3.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^0.19.0",
+    "husky": "^8.0.3",
+    "install": "^0.13.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.3.0"
+  }
+}
