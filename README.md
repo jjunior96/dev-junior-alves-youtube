@@ -8,7 +8,6 @@ A TypeScript starter for Next.js that includes all you need to build amazing pro
 - 🚫 **lint-staged** - Run linters against staged git files
 - 🐙 **React Testing Library (RTL)** - Builds by adding APIs for working with React components
 - 🃏 **Jest** - A delightful JavaScript Testing Framework with a focus on simplicity
-- 🧑‍🔬 **Cypress** - Fast, easy and reliable testing for anything that runs in a browser.
 - 💅 **Tailwind CSS** - Use the best bits of ES6 and CSS to style your apps without stress
 
 
