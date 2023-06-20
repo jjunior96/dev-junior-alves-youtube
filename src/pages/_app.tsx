@@ -1,7 +1,11 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Footer } from '@/components/Footer';
+import { initMocks } from '@/tests/mocks';
+
+if (process.env.NODE_ENV === 'development') {
+  initMocks();
+}
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +20,6 @@ function App({ Component, pageProps }: AppProps) {
 
       <main className="min-h-screen">
         <Component {...pageProps} />
-        <Footer />
       </main>
     </>
   );

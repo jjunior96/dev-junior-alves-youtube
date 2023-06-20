@@ -30,6 +30,10 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp']
   },
+  webpack: (config) => {
+    config.experiments.topLevelAwait = true;
+    return config;
+  },
   experimental: {
     swcMinify: true
   }
