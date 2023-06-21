@@ -1,11 +1,9 @@
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 
 import { siteConfig } from '@/config';
 
-import { Footer } from '@/components/Footer';
 import { Layout } from '@/components/Layout';
 
 export const metadata: Metadata = {
@@ -47,18 +45,11 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Script
-        async
-        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-      />
-
       <html suppressHydrationWarning lang="en">
         <body className={`${inter.className} w-full bg-primary`}>
           <Layout>
             <main className="pt-28">{children}</main>
           </Layout>
-
-          <Footer />
         </body>
       </html>
     </>
