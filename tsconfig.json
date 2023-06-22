@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated"
-  ],
+, "src/app/users/[id]/page.tsz"  ],
   "exclude": ["node_modules"]
 }
