@@ -1,11 +1,21 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-import { sleep } from '@/functions';
+type Results = {
+  name: { title: string; first: string; last: string };
+  phone: string;
+};
 
-export async function GET(request: Request) {
-  await sleep(2000);
+type Users = {
+  results: Results[];
+};
 
-  console.log(request);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export async function GET(request: NextRequest) {
+  // await sleep(2000);
+  // const tag = request.nextUrl.searchParams.get('tag');
 
-  return NextResponse.json({ id: 1, name: 'John Doe' });
+  const data = await fetch('https://randomuser.me/api/');
+  const users = (await data.json()) as Users;
+
+  return NextResponse.json(users);
 }

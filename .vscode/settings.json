@@ -1,0 +1,15 @@
+{
+  // Apenas para gravar
+  // "workbench.statusBar.visible": false,
+  // "workbench.activityBar.visible": false,
+  // "workbench.editor.showTabs": false,
+  // "workbench.editor.enablePreview": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.tabCompletion": "on",
+  "diffEditor.codeLens": true
+}

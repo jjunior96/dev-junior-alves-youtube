@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import { siteConfig } from '@/config';
+import { Providers } from '@/providers';
 
 import { Layout } from '@/components/Layout';
 
@@ -48,7 +49,9 @@ export default function RootLayout({
       <html suppressHydrationWarning lang="en">
         <body className={`${inter.className} w-full bg-primary`}>
           <Layout>
-            <main className="pt-28">{children}</main>
+            <Providers>
+              <main className="pt-28">{children}</main>
+            </Providers>
           </Layout>
         </body>
       </html>
