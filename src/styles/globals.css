@@ -58,8 +58,6 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: --background-start-rgb;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
