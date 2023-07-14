@@ -2,8 +2,6 @@ import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-import { siteConfig } from '@/config';
-
 import { Layout } from '@/components/Layout';
 
 export const metadata: Metadata = {
@@ -11,29 +9,7 @@ export const metadata: Metadata = {
     template: '%s | Junior Alves',
     default: 'Junior Alves'
   },
-  description: 'Blog onde falo sobre livros e código',
-  manifest: '/manifest.json',
-  authors: [{ name: 'Junior Alves' }],
-  metadataBase: new URL(`${siteConfig.url}`),
-  openGraph: {
-    type: 'website',
-    url: `${siteConfig.url}/cover.jpg`,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: 'Dev Junior Alves',
-    images: [
-      {
-        url: `${siteConfig.url}/cover.jpg`
-      }
-    ]
-  },
-  robots: 'index, follow',
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/cover.jpg`]
-  }
+  description: 'Blog onde falo sobre livros e código'
 };
 
 const inter = Inter({ subsets: ['latin'] });

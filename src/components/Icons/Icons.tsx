@@ -7,6 +7,10 @@ export {
   ArrowUp as ArrowUpIcon,
   ArrowUpRight as ArrowUpRightIcon,
 
+  // Login
+  User as UserIcon,
+  EnvelopeSimple as EnvelopeSimpleIcon,
+
   // General
   Copy as CopyIcon,
   List as OpenIcon,
