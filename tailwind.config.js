@@ -1,67 +1,76 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './content/**/*.{md,mdx}'
-  ],
-  safelist: [
-    {
-      pattern: /^grid-cols-/,
-      variants: ['sm', 'md', 'lg', 'xl', '2xl']
-    },
-    {
-      pattern: /^gap-/,
-      variants: ['sm', 'md', 'lg', 'xl', '2xl']
-    },
-    {
-      pattern: /^bg-/,
-      variants: ['blue', 'green', 'red']
-    },
-    {
-      pattern: /^text-/,
-      variants: ['blue', 'green', 'red']
-    }
-  ],
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
-      keyframes: {
-        slideUpEnter: {
-          '0%': {
-            opacity: 0,
-            transform: 'translateY(-20px)'
-          },
-          '100%': {
-            opacity: 100,
-            transform: 'translateY(0px)'
-          }
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        slideLeave: {
-          '0%': {
-            opacity: 100,
-            transform: 'translateY(0)'
-          },
-          '100%': {
-            opacity: 0,
-            transform: 'translateY(-20px)'
-          }
-        }
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
       },
       animation: {
-        'slide-enter': ' slideUpEnter .3s ease-in-out',
-        'slide-leave': ' slideLeave .3s ease-in-out'
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        permanent: ['Permanent Marker', 'cursive'],
-        foldit: ['Foldit', 'cursive']
-      },
-      colors: {
-        primary: '#201f27',
-        secundary: '#2E3038',
-        link: '#f72585'
-      }
-    }
+    },
   },
-  plugins: []
-};
+  plugins: [require("tailwindcss-animate")],
+}
