@@ -31,7 +31,8 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp']
   },
   experimental: {
-    swcMinify: true
+    swcMinify: true,
+    serverActions: true
   }
 };
 
